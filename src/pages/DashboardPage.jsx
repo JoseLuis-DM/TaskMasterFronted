@@ -90,7 +90,7 @@ function DashboardPage() {
       <main
         style={{
           padding: "2rem",
-          backgroundColor: "#112E40",
+          backgroundColor: "#C7D2D4",
           minHeight: "80vh",
         }}
       >
@@ -144,7 +144,7 @@ function DashboardPage() {
               <div
                 style={{
                   height: "6px",
-                  backgroundColor: "#112E40",
+                  backgroundColor: "#C7D2D4",
                   borderRadius: "3px",
                 }}
               >
@@ -152,7 +152,7 @@ function DashboardPage() {
                   style={{
                     width: `${cat.porcentaje}%`,
                     height: "6px",
-                    backgroundColor: "#1FBF92",
+                    backgroundColor: "#112E40",
                     borderRadius: "3px",
                   }}
                 />

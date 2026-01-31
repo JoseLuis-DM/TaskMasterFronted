@@ -10,7 +10,7 @@ export default function CircleChart({ label, percentage = 0, color = "#fff" }) {
         value={safePercentage}
         text={`${safePercentage.toFixed(1)}%`}
         styles={buildStyles({
-          textColor: "#fff",
+          textColor: "#112E40",
           pathColor: color,
           trailColor: "#1e3a8a",
         })}
