@@ -82,7 +82,7 @@ function DashboardPage() {
         <p className="header-username">{usuario.nombre} {usuario.apellidos}</p>
       </div>
 
-      <button className="header-edit-btn" onClick={handleEditar}>
+      <button className="header-edit-btn" onClick={() => navigate("/perfil")}>
         Editar Perfil
       </button>
     </header>
