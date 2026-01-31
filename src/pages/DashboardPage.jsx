@@ -4,11 +4,12 @@ import { getMetricas } from "../services/dashboardService";
 import TaskCard from "../components/TaskCard";
 import CardMetric from "../components/CardMetric";
 import CircleChart from "../components/CircleChart";
+import { getMyProfile } from "../services/usuarioService";
 
 function DashboardPage() {
    const [usuario, setUsuario] = useState({
-    nombre: "José",
-    apellidos: "Medina"
+    nombre: "",
+    apellidos: ""
   });
   const [tareas, setTareas] = useState([]);
   const [metricas, setMetricas] = useState({
@@ -31,6 +32,13 @@ function DashboardPage() {
       }
       try {
         const data = await getMetricas(token);
+
+        const response = await getMyProfile();
+        const user = response.data.data;
+
+        setUsuario({
+          nombre: user.nombre ?? "",
+        });
 
         setTareas(data.tareasRecientes || []);
 
@@ -60,11 +68,6 @@ function DashboardPage() {
     fetchData();
   }, [navigate]);
 
-  const handleEditar = () => {
-    // navigate("/editar-usuario");
-    console.log("Editar usuario");
-  };
-
   const porcentajeCompletadas = metricas.totalTareas
     ? (metricas.completadas / metricas.totalTareas) * 100
     : 0;
@@ -79,7 +82,7 @@ function DashboardPage() {
 
       <div className="header-center">
         <p className="header-welcome">Bienvenido</p>
-        <p className="header-username">{usuario.nombre} {usuario.apellidos}</p>
+        <p className="header-username">{usuario.nombre}</p>
       </div>
 
       <button className="header-edit-btn" onClick={() => navigate("/perfil")}>
