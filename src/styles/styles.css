@@ -242,7 +242,7 @@ p {
   text-align: center;
 }
 
-/* ================= LOGIN ================= */
+/* ---------------- LOGIN ---------------- */
 
 .container {
   min-height: 100vh;
@@ -303,6 +303,8 @@ p {
 .container .card a {
   color: var(--color-secundario);
 }
+
+/* -------------- PERFIL ---------------- */
 
 .profile-container {
   min-height: 100vh;
@@ -412,4 +414,132 @@ p {
 
 .profile-back button:hover {
   text-decoration: underline;
+}
+
+/* -------------- GESTIÓN DE TAREAS --------------*/
+
+.tareas-page {
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+.tareas-page h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-secundario);
+}
+
+/* ---------- FORM ---------- */
+
+.tarea-form {
+  max-width: 500px;
+  margin: 0 auto 2rem auto;
+  background-color: var(--color-card);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 2px solid var(--color-secundario);
+}
+
+.tarea-form h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--color-secundario);
+}
+
+.tarea-form input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.75rem;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+.tarea-form button {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: none;
+  background-color: var(--color-boton);
+  color: var(--color-fondo);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.tarea-form button:hover {
+  background-color: var(--color-secundario);
+}
+
+/* ---------- LISTA ---------- */
+
+.tareas-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* ---------- ITEM ---------- */
+
+.tarea-item {
+  width: 260px;
+  background-color: var(--color-fondo);
+  border: 2px solid var(--color-secundario);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  color: var(--color-texto);
+}
+
+.tarea-item h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--color-secundario);
+}
+
+.tarea-item p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+.tarea-item-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.tarea-item-actions button {
+  flex: 1;
+  padding: 0.4rem;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-editar {
+  background-color: var(--color-boton);
+  color: var(--color-fondo);
+}
+
+.btn-editar:hover {
+  background-color: var(--color-secundario);
+}
+
+.btn-eliminar {
+  background-color: #FF6B6B;
+  color: #112E40;
+}
+
+.btn-eliminar:hover {
+  opacity: 0.85;
+}
+
+.tarea-item select {
+  margin-top: 0.75rem;
+  width: 100%;
+  padding: 0.4rem;
+  border-radius: 6px;
+  border: none;
 }
